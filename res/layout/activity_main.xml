@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+<!--      android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+    -->
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="1dp"
+        android:text="Tage :" />
+    
+
+    <TextView
+        android:id="@+id/textTage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="24dp" />
+<!-- Stunden -->
+    <TextView
+        android:id="@+id/textViewStunden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textTage"
+        android:text="Stunden :" />
+
+    <TextView
+        android:id="@+id/textStunden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewStunden"
+        android:layout_centerHorizontal="true" />
+    
+<!-- Minuten -->
+
+    <TextView
+        android:id="@+id/textViewMinuten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textStunden"
+        android:text="Minuten :" />
+    
+    <TextView
+        android:id="@+id/textMinuten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMinuten"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="24dp" />
+
+    <!-- Sekunden -->
+
+    <TextView
+        android:id="@+id/textViewSekunden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textMinuten"
+        android:layout_marginTop="42dp"
+        android:text="Sekunden :" />
+
+    <TextView
+        android:id="@+id/textSekunden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_centerHorizontal="false"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/textViewSekunden" />
+
+    <TextView
+        android:id="@+id/textMillisek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textSekunden"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

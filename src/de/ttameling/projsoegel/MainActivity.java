@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
 	                	 Calendar cal   = Calendar.getInstance();      
 	                	 Calendar today = Calendar.getInstance();
 	                	 int day_of_year = today.get(Calendar.DAY_OF_YEAR);
-	                	 cal.set(Calendar.HOUR, 12);                                                                              
+	                	 cal.set(Calendar.HOUR, 00);                                                                              
 	                	 cal.set(Calendar.MINUTE, 00);                                                                            
 	                	 cal.set(Calendar.SECOND, 00);                                                                            
 	                	 cal.set(Calendar.DATE, 26);                                                                              
@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
 	                	 long minuten    = sekunden / 60;
 	                	 long stunden    = minuten / 60;
 	                	 long tage       = stunden / 24;
-                         String hello = Long.toString(difference);
+                         String strMillisek = Long.toString(difference);
                          String strTage  = Long.toString(tage);
                          String strStunden = Long.toString(stunden % 24);
                          String strMinuten = Long.toString(minuten % 60);
@@ -101,7 +101,7 @@ public class MainActivity extends Activity {
                 	    {
                 	    	textMillisek.setGravity(Gravity.CENTER);
                 	    	textMillisek.setTextSize(30);
-                	    	textMillisek.setText(hello);
+                	    	textMillisek.setText(strMillisek);
 //                		    setContentView(textTage);
                 	    }
                 	    

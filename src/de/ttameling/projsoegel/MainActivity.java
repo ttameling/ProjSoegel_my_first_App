@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 					public void run() {    
 	                	 Calendar cal   = Calendar.getInstance();      
 	                	 Calendar today = Calendar.getInstance();
-	                	 int day_of_year = today.get(Calendar.DAY_OF_YEAR);
+
 	                	 cal.set(Calendar.HOUR, 00);                                                                              
 	                	 cal.set(Calendar.MINUTE, 00);                                                                            
 	                	 cal.set(Calendar.SECOND, 00);                                                                            
@@ -43,29 +43,21 @@ public class MainActivity extends Activity {
 	                	 cal.set(Calendar.MONTH, 07);                                                                              
 	                	 cal.set(Calendar.YEAR, 2014); 
 	                	 cal.set(Calendar.DAY_OF_YEAR, 207);
-	                	 int cal_dof = cal.get(Calendar.DAY_OF_YEAR);
-//	                	 DateFormat[] formats = new DateFormat[] {
-//	                			   DateFormat.
-//	                			   DateFormat.getDateInstance(),
-//	                			   DateFormat.getDateTimeInstance(),
-//	                			   DateFormat.getTimeInstance(),
-//	                			 };
 
-	                	 
-	                	 
-	                	 
-	                	 long difference = cal.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
-	                	 long sekunden   = difference / 1000;
-	                	 long minuten    = sekunden / 60;
-	                	 long stunden    = minuten / 60;
-	                	 long tage       = stunden / 24;
-                         String strMillisek = Long.toString(difference);
-                         String strTage  = Long.toString(tage);
-                         String strStunden = Long.toString(stunden % 24);
-                         String strMinuten = Long.toString(minuten % 60);
+	                	 long difference = cal.getTimeInMillis() - today.getTimeInMillis();
+
+	                	 long tage       = difference / 3600 / 1000 / 24;
+	                	 long stunden  = 23 - today.get(Calendar.HOUR_OF_DAY);
+	                	 long minuten  = 59 - today.get(Calendar.MINUTE);
+	                	 long sekunden = 59 - today.get(Calendar.SECOND); 
+
+	                	 String strMillisek = Long.toString(difference);
+                         String strTage     = Long.toString(tage);
+                         String strStunden  = Long.toString(stunden % 24);
+                         String strMinuten  = Long.toString(minuten % 60);
                          String strSekunden = Long.toString(sekunden % 60);
-	                	 //	                    String hello = (String) DateFormat.format((CharSequence) myString, difference);                    
-                    //     String currentDateTimeString = (String) cal.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();                      
+	                	 //	    String hello = (String) DateFormat.format((CharSequence) myString, difference);                    
+                         //     String currentDateTimeString = (String) cal.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();                      
                  	    TextView textTage  = (TextView) findViewById(R.id.textTage);
                 	    if (textTage != null)
                 	    {
@@ -102,15 +94,7 @@ public class MainActivity extends Activity {
                 	    	textMillisek.setGravity(Gravity.CENTER);
                 	    	textMillisek.setTextSize(30);
                 	    	textMillisek.setText(strMillisek);
-//                		    setContentView(textTage);
                 	    }
-                	    
-                	    
-                	     
-//	                	 textview.setGravity(Gravity.CENTER);                                        
-//	                     textview.setTextSize(40);                                                  
-//	                     textview.setText(hello);                                    
-//	                     setContentView(textview);                                                  
 	                 }                                                                              
 	             });                                                                                
 	         }                                                                                      
